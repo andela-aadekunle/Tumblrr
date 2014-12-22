@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+
+<html ng-app="tumblrApp">
+<head>
+	<title>AngularTumblr</title>
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body ng-controller="tumblrController">
+	<div class="header">
+		<p>Tumblring</p>
+
+	</div>
+
+	<div class="wrapper">
+		<p>Type in a Blog name</p>
+		<input type="text" id="input" placeholder="Enter blog here" ng-model="query" required>
+		<input type="submit" id="blog" value="Search" ng-click="fetchData('text')">
+			<ul class="button">
+				<li id="photo" ng-click="fetchData('photo')">Pictures</li>
+				<li id="audio" ng-click="fetchData('audio')">Audios</li>
+				<li id="video" ng-click="fetchData('video')">Videos</li>
+			</ul>
+	</div>
+	<div id="alert"></div>
+		<ul class="blogInfo">
+			<li>
+				<ul>
+					<!-- <h2>Blog Name</h2> -->
+					<li id="title">{{blog.name}}</li>
+					<li>{{blog.title}}</li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<!-- <h2>Blog Description</h2> -->
+					<li ng-bind-html="blog.description" id="description"></li>
+					<li ng-show="blogExist" class="validation">Blog doesn't exist.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div>
+			<!-- <ul id="validation"></ul> -->
+			<ul id="result">
+
+				<li class="blogs">
+				<li ng-show="content" class="validation">This Post is Empty.</li>
+				<li ng-repeat="post in posts">
+					<img ng-src="{{post.photos[0].alt_sizes[2].url}}"/>
+					<div ng-bind-html="post.player[1].embed_code"></div>
+					<div ng-bind-html="post.player"></div>
+					<p ng-bind-html="post.body"></p>
+					<p ng-bind-html="post.caption"></p>
+
+					<p class="date">Date Posted:{{post.date}}</p>
+					 
+					
+				</li>
+
+			</ul>
+		</div>
+
+
+	
+
+</body>
+
+	<script type="text/javascript" src="js/angular/angular.js"></script>
+	<script type="text/javascript" src="js/angular-sanitize.js"></script>
+	<script type="text/javascript" src="js/app2.js"></script>
+</html>
+
