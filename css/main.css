@@ -1,0 +1,131 @@
+/*General Styling*/
+
+
+body {
+	/*background: url(../img/wood.jpg);*/
+	font-size: 1.5em;
+}
+
+a {
+	text-decoration: none;
+	color:#2a8bc7;
+}
+
+a:hover {
+	color:pink;
+	font-size: 1.1em;
+}
+
+img {
+	border-radius: 15px;
+	background-color: rgba(200,200,200,0.3);
+}
+
+.header {
+	width:100%;
+	background-color: lightgrey;
+	margin-top: -60px;
+}
+
+.header p {
+	font-family: monospace;
+	font-size: 3em;
+	color:#2a8bc7;
+	font-weight: bold;
+	display:block;
+	margin-left: 500px;
+
+}
+
+.wrapper {
+	width:60%;
+	margin:5% 20% 0% 20%;
+	text-align: center;
+}
+
+#input {
+	width: 55%;
+	margin:5% auto;
+	text-align: center;
+	height:30px;
+	border-radius: 5px;
+	font-size: 1.1em;
+}
+
+#blog {
+	font-size: 20px;
+	padding-top: 10px;
+	cursor: pointer;
+	background-color: #2a8bc7;
+	color:white;
+	font-weight: bold;
+	border-radius: 5px;
+	width: 100px;
+	height: 40px;
+
+
+}
+
+.button li {
+	width:20%;
+	height:20%;
+	display: inline-block;
+	margin:1% auto;
+	text-align: center;
+}
+
+.button li:hover {
+	cursor:pointer;
+	background-color: #2a8bc7;
+	color:white;
+	border-radius: 5px;
+} 
+
+#result {
+	width: 100px;
+	margin: auto;
+	border: 1px,solid,black;
+	display:inline-block;
+	padding:2%;
+	list-style: none;
+	text-align: center;
+	border-radius: 15px;
+	/*display: inline-block;*/
+}
+
+.blogInfo li {
+	display:block;
+	margin:1% 5% 0% 5%;
+}
+
+#title,#description {
+	margin:0;
+}
+
+/*#title a {
+	color: darkgreen;
+	font-weight: bold;
+}*/
+
+#result li {
+ 	text-align: justify;
+ 	display:inline-block;
+ 	margin-top:2%;
+ 	margin-left: 30%;
+ 	border-bottom:1px solid;
+ 	padding:1% 5%;
+}
+
+.blogs {
+	font-size: 0.9em;
+}
+
+.date {
+	color:green;
+	font-size: 0.7em;
+}
+
+#validation {
+	margin-left: 40%;
+}
+
